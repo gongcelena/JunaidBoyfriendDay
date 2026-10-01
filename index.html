@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#0b0811">
+<title>For Junaid ♡</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stars"></div><div id="hearts"></div><div id="confetti"></div>
+<div id="flash"></div>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="raindance.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" class="music-btn">♫</button>
+
+<main id="story">
+
+<section class="scene active" id="scene1">
+  <div class="moon"></div>
+  <div class="sparkle-word">for my favourite human</div>
+  <h1>Hey, <span>Juju…</span></h1>
+  <p class="subtitle">I made a tiny corner of the internet just for you. 🌙</p>
+  <div class="sealed-note">♡ <span>OPEN ME</span> ♡</div>
+  <button class="primary" onclick="nextScene()">Tap to enter</button>
+  <p class="tiny">Best experienced with sound on. 🎧</p>
+</section>
+
+<section class="scene" id="scene2">
+  <p class="eyebrow">03 • 10 • 2026</p>
+  <h2>Do you know<br>what today is?</h2>
+  <div class="question-card">
+    <div class="big-heart">♡</div>
+    <p>It's <b>Boyfriend Day.</b> 🎀</p>
+    <p class="small">And yes, this entire website is about you. Try not to let it inflate that already enormous ego. 🤭</p>
+  </div>
+  <button class="primary" onclick="nextScene()">Fine, continue →</button>
+</section>
+
+<section class="scene" id="scene3">
+  <p class="eyebrow">chapter one • our scrapbook</p>
+  <h2>A few pieces of <span>us.</span></h2>
+  <div class="scrapbook">
+    <div class="tape"></div>
+    <div class="polaroid" id="polaroid">
+      <img id="memoryImg" src="photo1.jpg" alt="Our memory">
+      <p id="memoryCaption">The one I would keep forever. ♡</p>
+    </div>
+    <div class="scribble">our little universe ✦</div>
+  </div>
+  <button class="secondary" onclick="nextMemory()">Turn the page →</button>
+  <p id="memoryCounter" class="tiny">memory 1 / 5</p>
+</section>
+
+<section class="scene" id="scene4">
+  <p class="eyebrow">chapter two • scientific evidence</p>
+  <h2>Why I love<br><span>this man.</span></h2>
+  <div class="reason-card">
+    <div id="reasonNo" class="reason-number">01</div>
+    <p id="reasonText">That adorable doggy laugh. 🥹</p>
+  </div>
+  <button class="heart-btn" onclick="nextReason()">♥</button>
+  <p id="reasonCount" class="tiny">tap for evidence • 1 / 7</p>
+  <button class="text-btn" onclick="nextScene()">I need more evidence →</button>
+</section>
+
+<section class="scene" id="scene5">
+  <p class="eyebrow">classified juju files</p>
+  <h2>Things you do that<br><span>drive Meenu insane.</span> 😂</h2>
+  <div class="chat-window">
+    <div class="chat-name">♡ JUJU</div>
+    <div id="chatBubble" class="chat-bubble">watches reels while we're literally on a video call 📱</div>
+    <div class="typing-dots"><i></i><i></i><i></i></div>
+  </div>
+  <button class="primary" onclick="nextChaos()">Next offence →</button>
+  <button class="text-btn" onclick="nextScene()">Okay, I'll forgive you →</button>
+</section>
+
+<section class="scene" id="scene6">
+  <p class="eyebrow">chapter three • memories</p>
+  <h2>Open the little<br><span>envelopes.</span> 💌</h2>
+  <div class="envelopes">
+    <button class="envelope" onclick="openEnvelope(this,0)"><span>🌙</span><b>Midnight</b><small>open me</small></button>
+    <button class="envelope" onclick="openEnvelope(this,1)"><span>🍫</span><b>Chocolates</b><small>open me</small></button>
+    <button class="envelope" onclick="openEnvelope(this,2)"><span>🫶</span><b>Bumble</b><small>open me</small></button>
+    <button class="envelope" onclick="openEnvelope(this,3)"><span>🔒</span><b>Classified</b><small>open me</small></button>
+  </div>
+  <div id="envelopeReveal" class="reveal-text">Choose one… ♡</div>
+  <button class="text-btn" onclick="nextScene()">I have one more thing to tell you →</button>
+</section>
+
+<section class="scene" id="scene7">
+  <p class="eyebrow">chapter four • no more jokes</p>
+  <div class="letter-shell">
+    <div class="letter-paper">
+      <div class="letter-top">To my handsome Prince, ♡</div>
+      <div id="letterText" class="letter-text"></div>
+      <div class="signature">— Meenu 💋</div>
+    </div>
+  </div>
+  <button id="letterNext" class="primary hidden" onclick="nextScene()">One final surprise… 🎁</button>
+</section>
+
+<section class="scene finale" id="scene8">
+  <div id="finalBefore">
+    <p class="eyebrow">final mission • Junu</p>
+    <h2>Make a wish. 🎂</h2>
+    <p class="small">Three candles. Three wishes. One very loved Juji.</p>
+    <div class="cake">
+      <div class="candle c1" onclick="blowCandle(this)"><span class="flame"></span></div>
+      <div class="candle c2" onclick="blowCandle(this)"><span class="flame"></span></div>
+      <div class="candle c3" onclick="blowCandle(this)"><span class="flame"></span></div>
+      <div class="cake-top"></div><div class="cake-body"></div>
+      <div class="sprinkle s1"></div><div class="sprinkle s2"></div><div class="sprinkle s3"></div>
+    </div>
+    <p id="candleHint" class="tiny">Tap a candle to blow it out. 🕯️</p>
+  </div>
+
+  <div id="finalReveal" class="final-reveal hidden">
+    <div class="final-photo"><img src="photo1.jpg" alt="Us"></div>
+    <div class="burst">✦ ♡ ✦ ♡ ✦</div>
+    <h1>Happy Boyfriend Day,<br><span>my love!!!</span></h1>
+    <p class="nickname-line">My Juju. My Junu. My Juji. My Booboo. 🥹❤️</p>
+    <p class="final-small">Thank you for being my favourite person.<br>Now come here so I can annoy you forever. ♡</p>
+    <button class="secondary" onclick="location.reload()">Replay our little story ↻</button>
+  </div>
+</section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
